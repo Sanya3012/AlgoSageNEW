@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Crop Request</title>
+    <link rel="stylesheet" href="customisedCrop2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customized Crop Request</h1>
+
+        <!-- Customer Identification Form -->
+        <section id="customer-identification">
+            <h2>Customer Identification</h2>
+            <form id="customerForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Mobile Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="customerType">Customer Type:</label>
+                <select id="customerType" name="customerType" required>
+                    <option value="consumer">Consumer</option>
+                    <option value="retailer">Retailer</option>
+                    <option value="wholesaler">Wholesaler</option>
+                </select>
+
+                <label for="idProof">Government ID Proof:</label>
+                <input type="file" id="idProof" name="idProof" accept=".pdf, .jpg, .png" required>
+
+                <button type="submit" id="submitForm">Submit for Verification</button>
+            </form>
+        </section>
+
+        <!-- Agreement/Contract Section -->
+        <section id="agreement-section">
+            <h2>Agreement/Contract Submission</h2>
+            <form id="agreementForm">
+                <label for="panCard">Upload PAN Card:</label>
+                <input type="file" id="panCard" name="panCard" accept=".pdf, .jpg, .png" required>
+
+                <label for="aadhaarCard">Upload Aadhaar Card:</label>
+                <input type="file" id="aadhaarCard" name="aadhaarCard" accept=".pdf, .jpg, .png" required>
+
+                <label for="agreementCheck">Agree to Terms:</label>
+                <input type="checkbox" id="agreementCheck" name="agreementCheck" required> I agree to the terms and conditions.
+
+                <button type="submit">Submit Contract</button>
+            </form>
+        </section>
+
+        <!-- Customized Crop Request Section -->
+        <section id="crop-request">
+            <h2>Submit Your Customized Crop Request</h2>
+            <form id="cropForm">
+                <label for="cropType">Crop Type:</label>
+                <select id="cropType" name="cropType" required>
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                    <option value="maize">Maize</option>
+                </select>
+
+                <label for="quantity">Quantity (kg/tonnes):</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="quality">Quality:</label>
+                <select id="quality" name="quality" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <label for="timeFrame">Time Frame (weeks):</label>
+                <input type="number" id="timeFrame" name="timeFrame" required>
+
+                <label for="season">Current Season:</label>
+                <input type="text" id="season" name="season" readonly>
+
+                <label for="additionalNotes">Additional Notes:</label>
+                <textarea id="additionalNotes" name="additionalNotes"></textarea>
+
+                <button type="submit">Submit Crop Request</button>
+            </form>
+        </section>
+    </div>
+    <script src="customisedCrop2.js"></script>
+
+</body>
+</html>
